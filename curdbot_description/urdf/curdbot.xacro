@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+
+<robot name="curdbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find curdbot_description)/urdf/main.gazebo"/>
+
+<link name="base_footprint"/>
+
+<joint name="bf" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 0 0.05" rpy="0 0 0" />
+    <parent link="base_footprint" />
+    <child link="curdbot_base" />
+</joint>
+
+<link name="curdbot_base">
+<inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <mass value="28" />
+    <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.2" iyz="0" izz="1.001"/>
+</inertial>
+<visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/chassis.dae" />
+    </geometry>
+</visual>
+<collision>
+<origin xyz="0 0.0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/chassis.dae" />
+    </geometry>
+</collision>
+</link>
+  
+
+<joint name="FLJ" type="continuous">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.1 0.1 -0.02" rpy="0 0 0" />
+    <parent link="curdbot_base" />
+    <child link="FL_wheel" />
+</joint>    
+
+
+<link name="FL_wheel">
+<inertial>
+    <origin xyz="0 0.0 0.12" rpy="0 0 0" />
+    <mass value="0.5" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+</inertial>
+<visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</visual>
+<collision>
+<origin xyz="0 0.0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</collision>
+</link>
+
+
+
+
+
+<joint name="FRJ" type="continuous">
+<axis xyz="0 1 0" />
+    <origin xyz="0.1 -0.1 -0.02" rpy="0 0 0" />
+    <parent link="curdbot_base" />
+    <child link="FR_wheel" />
+</joint>    
+
+
+<link name="FR_wheel">
+<inertial>
+    <origin xyz="0 0.0 0.12" rpy="0 0 0" />
+    <mass value="0.5" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+</inertial>
+<visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</visual>
+<collision>
+<origin xyz="0 0.0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</collision>
+</link>
+
+
+
+
+
+<joint name="RLJ" type="continuous">
+<axis xyz="0 1 0" />
+    <origin xyz="-0.1 0.1 -0.02" rpy="0 0 0" />
+    <parent link="curdbot_base" />
+    <child link="RL_wheel" />
+</joint>    
+
+
+<link name="RL_wheel">
+<inertial>
+    <origin xyz="0 0.0 0.12" rpy="0 0 0" />
+    <mass value="0.5" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+</inertial>
+<visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</visual>
+<collision>
+<origin xyz="0 0.0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</collision>
+</link>
+
+
+<joint name="RRJ" type="continuous">
+<axis xyz="0 1 0" />
+    <origin xyz="-0.1 -0.1 -0.02" rpy="0 0 0" />
+    <parent link="curdbot_base" />
+    <child link="RR_wheel" />
+</joint>    
+
+
+<link name="RR_wheel">
+<inertial>
+    <origin xyz="0 0.0 0.12" rpy="0 0 0" />
+    <mass value="0.5" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+</inertial>
+<visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</visual>
+<collision>
+<origin xyz="0 0.0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/wheel.dae" />
+    </geometry>
+</collision>
+</link>
+
+</robot>

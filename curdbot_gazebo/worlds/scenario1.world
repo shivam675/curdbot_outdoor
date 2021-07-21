@@ -1,7 +1,3 @@
-<!--
-  Outdoor scenario from HRATC repository:
-  https://github.com/ras-sight/hratc2014_framework
--->
 <?xml version="1.0" encoding="UTF-8" ?>
 <sdf version="1.4">
   <world name="default">
