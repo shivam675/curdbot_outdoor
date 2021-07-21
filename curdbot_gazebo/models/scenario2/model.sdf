@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="scenario2">
+      <link name="scenario2_link">
+        <collision name="scenario2_collision">
+          <geometry>
+            <mesh>
+	          <uri>model://scenario2/meshes/scenario2.dae</uri>
+              <scale>1 1 0.005</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="scenario2_visual">
+          <geometry>
+            <mesh>
+	          <uri>model://scenario2/meshes/scenario2.dae</uri>
+              <scale>1 1 0.005</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>false</cast_shadows>
+        </visual>
+      </link>
+      <static>true</static>
+    </model>
+</sdf>
