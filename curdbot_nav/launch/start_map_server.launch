@@ -1,0 +1,5 @@
+<launch>
+
+    <node name="empty_map_server" pkg="map_server" type="map_server" args="$(find curdbot_nav/maps/mymap_empty.yaml)" />
+
+</launch>

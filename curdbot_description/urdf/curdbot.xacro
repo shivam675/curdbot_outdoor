@@ -4,8 +4,18 @@
 <xacro:include filename="$(find curdbot_description)/urdf/main.gazebo"/>
 
 <link name="base_footprint"/>
+<link name="imu_link"/>
 
-<joint name="bf" type="fixed">
+<joint name="imu_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="0 0 0.05" rpy="0 0 0" />
+    <parent link="curdbot_base" />
+    <child link="imu_link" />
+</joint>
+
+<!-- <link name="base_footprint"/> -->
+
+<joint name="basefootprint" type="fixed">
     <axis xyz="0 1 0" />
     <origin xyz="0 0 0.05" rpy="0 0 0" />
     <parent link="base_footprint" />

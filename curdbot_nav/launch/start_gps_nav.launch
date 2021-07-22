@@ -1,0 +1,7 @@
+<launch>
+
+    <node name="empty_map_server" pkg="map_server" type="map_server" args="$(find curdbot_nav/maps/mymap_empty.yaml)" />
+    <node name="move_base" pkg="move_base" type="move_base" args="$(find curdbot_nav/maps/mymap_empty.yaml)" />
+    <node name="empty_map_server" pkg="map_server" type="map_server" args="$(find curdbot_nav/maps/mymap_empty.yaml)" />
+
+</launch>

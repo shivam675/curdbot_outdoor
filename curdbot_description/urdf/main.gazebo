@@ -23,6 +23,13 @@
    </plugin>
   </gazebo>
 
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+
 
   <gazebo reference="imu_link">
     <gravity>true</gravity>
@@ -45,15 +52,20 @@
     </sensor>
   </gazebo>
 
-  <gazebo>  
-    <plugin name="gps" filename="libhector_gazebo_ros_gps.so">  
-        <updateRate>10.0</updateRate>  
-        <topicName>sensor_msgs/NavSatFix</topicName>  
-        <gaussianNoise>0.0 0.0 0.0</gaussianNoise>  
-        <offset>0 0 0</offset>  
-        <velocityGaussianNoise>0 0 0</velocityGaussianNoise>  
-        <frameId>base_link</frameId>  
-    </plugin>  
-    </gazebo>
+  <gazebo>
+    <plugin name="gps_controller" filename="libhector_gazebo_ros_gps.so">
+      <robotNamespace>/</robotNamespace>
+      <updateRate>40</updateRate>
+      <bodyName>curdbot_base</bodyName>
+      <frameId>curdbot_base</frameId>
+      <topicName>navsat/fix</topicName>
+      <velocityTopicName>navsat/vel</velocityTopicName>
+      <referenceLatitude>49.9</referenceLatitude>
+      <referenceLongitude>8.9</referenceLongitude>
+      <referenceHeading>0</referenceHeading>
+      <referenceAltitude>0</referenceAltitude>
+      <drift>0.0001 0.0001 0.0001</drift>
+    </plugin>
+  </gazebo>
 
 </robot>
