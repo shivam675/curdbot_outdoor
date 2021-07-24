@@ -1,0 +1,21 @@
+<launch>
+ <!-- -->
+  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" respawn="true">
+
+    <param name="magnetic_declination_radians" value="0"/>
+    <param name="yaw_offset" value="0"/>
+    <param name="zero_altitude" value="true"/>
+
+    <param name="use_odometry_yaw" value="false"/>
+    <param name="wait_for_datum" value="false"/>
+   
+    <param name="publish_filtered_gps" value="true"/>
+    <param name="broadcast_utm_transform" value="true"/>
+    
+    <remap from="/imu/data" to="/imu" />
+    <remap from="/gps/fix" to="/navsat/fix" />
+    <remap from="/odometry/filtered" to="/odom" />
+
+  </node>
+
+</launch>

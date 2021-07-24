@@ -1,7 +1,26 @@
 <launch>
 
-    <node name="empty_map_server" pkg="map_server" type="map_server" args="$(find curdbot_nav/maps/mymap_empty.yaml)" />
-    <node name="move_base" pkg="move_base" type="move_base" args="$(find curdbot_nav/maps/mymap_empty.yaml)" />
-    <node name="empty_map_server" pkg="map_server" type="map_server" args="$(find curdbot_nav/maps/mymap_empty.yaml)" />
+        
+    <!-- Run navsat gps to odometry conversion-->
+    <include file="$(find curdbot_nav)/launch/navsat.launch" />
+
+    <!-- Run the ekf for map to odom config -->
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_with_gps"> 
+    <rosparam command="load" file="$(find curdbot_nav)/config/robot_localization_with_gps.yaml" />
+  </node>
+
+
+    <!-- Run the map server -->
+    <arg name="map_file" default="$(find curdbot_nav)/maps/mymap_empty.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+    
+    <!--- Run Move Base -->
+    <include file="$(find curdbot_nav)/launch/movebase.launch" />
+ 
+
+    <!-- Start RVIZ for Localization -->
+    <include file="$(find curdbot_nav)/launch/viz.launch">
+        <arg name="config" value="localization" />
+    </include>
 
 </launch>

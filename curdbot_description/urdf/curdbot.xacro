@@ -6,11 +6,40 @@
 <link name="base_footprint"/>
 <link name="imu_link"/>
 
+
+<link name="laser">
+<inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <mass value="0.3" />
+    <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.2" iyz="0" izz="1.001"/>
+</inertial>
+<visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/lidar.dae" scale="0.8 0.8 0.3" />
+    </geometry>
+</visual>
+<collision>
+<origin xyz="0 0.0 0" rpy="0 0 0" />
+    <geometry>
+    <mesh filename="package://curdbot_description/meshes/dae/lidar.dae" scale="0.8 0.8 0.3" />
+    </geometry>
+</collision>
+</link>
+
+
 <joint name="imu_joint" type="fixed">
     <axis xyz="0 0 0" />
     <origin xyz="0 0 0.05" rpy="0 0 0" />
     <parent link="curdbot_base" />
     <child link="imu_link" />
+</joint>
+
+<joint name="laser_joint" type="fixed">
+    <axis xyz="0 0 0"/>
+    <origin xyz="0.1 0 0.2" rpy="0 0 0" />
+    <parent link="curdbot_base" />
+    <child link="laser" />
 </joint>
 
 <!-- <link name="base_footprint"/> -->
