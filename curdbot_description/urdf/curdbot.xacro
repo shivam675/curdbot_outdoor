@@ -3,7 +3,25 @@
 <robot name="curdbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 <xacro:include filename="$(find curdbot_description)/urdf/main.gazebo"/>
 
-<link name="base_footprint"/>
+<!-- <link name="base_footprint">
+<inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <mass value="28" />
+    <inertia ixx="0.3" ixy="0" ixz="0" iyy="0.2" iyz="0" izz="1.001"/>
+</inertial>
+<visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+    </geometry>
+</visual>
+<collision>
+<origin xyz="0 0.0 0" rpy="0 0 0" />
+    <geometry>
+    </geometry>
+</collision>
+</link> -->
+
+
 <link name="imu_link"/>
 
 
@@ -44,12 +62,12 @@
 
 <!-- <link name="base_footprint"/> -->
 
-<joint name="basefootprint" type="fixed">
+<!-- <joint name="basefootprint" type="fixed">
     <axis xyz="0 1 0" />
     <origin xyz="0 0 0.05" rpy="0 0 0" />
     <parent link="base_footprint" />
     <child link="curdbot_base" />
-</joint>
+</joint> -->
 
 <link name="curdbot_base">
 <inertial>
