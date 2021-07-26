@@ -6,7 +6,7 @@
 
     <!-- Run the ekf for map to odom config -->
     <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_with_gps"> 
-    <rosparam command="load" file="$(find curdbot_nav)/config/robot_localization_with_gps.yaml" />
+    <rosparam command="load" file="$(find curdbot_nav)/configs/robot_localization.yaml" />
   </node>
 
 

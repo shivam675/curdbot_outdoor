@@ -6,11 +6,11 @@
     <param name="yaw_offset" value="0"/>
     <param name="zero_altitude" value="true"/>
 
-    <param name="use_odometry_yaw" value="false"/>
+    <param name="use_odometry_yaw" value="true"/>
     <param name="wait_for_datum" value="false"/>
    
     <param name="publish_filtered_gps" value="true"/>
-    <param name="broadcast_utm_transform" value="true"/>
+    <param name="broadcast_cartesian_transform" value="true"/>
     
     <remap from="/imu/data" to="/imu" />
     <remap from="/gps/fix" to="/navsat/fix" />

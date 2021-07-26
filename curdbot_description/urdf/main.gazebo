@@ -16,7 +16,7 @@
       <topicName>cmd_vel</topicName>
       
       <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>/wheel/odom</odometryTopic>
+      <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
       
       <broadcastTF>true</broadcastTF>

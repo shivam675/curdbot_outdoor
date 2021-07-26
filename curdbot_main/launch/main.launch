@@ -1,0 +1,11 @@
+<launch>
+
+        
+    <!-- Run simulation in gazebo-->
+    <include file="$(find curdbot_gazebo)/launch/curdbot.launch" />
+
+    <!-- Run navigation nodes-->
+    <include file="$(find curdbot_nav)/launch/start_gps_nav.launch" />
+
+
+</launch>

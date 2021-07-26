@@ -13,6 +13,9 @@ TrajectoryPlannerROS:
 
   holonomic_robot: false
   escape_vel: -0.5
+  
+  allow_unknown: true
+  # track_unknown_space: true
 
   # Goal Tolerance Parameters
   yaw_goal_tolerance: 0.157

@@ -1,7 +1,7 @@
 <launch>
     <param name="robot_description" command="$(find xacro)/xacro '$(find curdbot_description)/urdf/curdbot.xacro'"/>
   <param name="use_gui" value="true"/>
-  <arg name="config" default="complete" />
+  <arg name="config" default="default" />
 
 
 
