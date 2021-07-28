@@ -12,16 +12,16 @@ git clone https://github.com/shivam675/curdbot_outdoor.git
 ```
 
 ## OUTPUT DEMO 
-<iframe width="686" height="386" src="https://www.youtube.com/embed/IkEjZUuPtqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![](skin.gif)
 
 
 
 ## OUTPUT DEMO CLOSEUP
-<iframe width="686" height="386" src="https://www.youtube.com/embed/P-vfUUGuLXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![](final.gif)
 
-<!-- # Final Output
-![](odom_display.gif) -->
 
+## Check the full video here:
+[2+ mins of video](https://youtu.be/P-vfUUGuLXE)
 
 # Major Dependencies packages:
 1. robot_localization --> `https://github.com/cra-ros-pkg/robot_localization.git`
