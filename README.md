@@ -11,12 +11,12 @@ The repo beholds the packages for outdoor navigation of a mobile robot using gps
 git clone https://github.com/shivam675/curdbot_outdoor.git
 ```
 
-## OUTPUT DEMO 
+## OUTPUT DEMO CLOSEUP
 ![](skin.gif)
 
 
 
-## OUTPUT DEMO CLOSEUP
+## OUTPUT DEMO 
 ![](final.gif)
 
 
