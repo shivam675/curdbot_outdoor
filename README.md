@@ -62,11 +62,11 @@ catkin_make -DCMAKE_BUILD_TYPE=Release -j$(nproc)
 
 ### How to run:
 
-1. Run **curdbot.launch** file | Terminal 1 (rosbag):
+1. Run **curdbot.launch** file | Terminal 1 (sim):
 ```sh 
 roslaunch curdbot_gazebo curdbot.launch
 ```
-2. Run **start_gps_nav.launch** fine | Terminal 2 (RTABMAP node): 
+2. Run **start_gps_nav.launch** fine | Terminal 2 (nav node): 
 ```sh 
 roslaunch curdbot_nav start_gps_nav.launch
 ```
